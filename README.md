@@ -49,7 +49,14 @@ css modules解决方案依然是只针对于css，并没有赋予它更多的功
 - 可以结合js直接对css某一属性值进行逻辑性操做，直接修改样式。
 
 2.因为可以在css进行更多的逻辑性改变，所以在做选择属性进行样式改变功能时，直接通过props改变值。
+
 3.可以定制主题，和materialUI组件主题配合使用。
+
+```
+const Testdemo = styled(div).attrs(props => ({
+  justify: props.justify || "center"
+}))`   ... style   `
+```
 
 同样提高了样式书写效率，而且对css赋予了更多的功能，不在局限于纯css，而是可以结合js进行更多逻辑操做。十分强大！
 
